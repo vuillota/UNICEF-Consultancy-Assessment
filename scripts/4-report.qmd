@@ -9,6 +9,7 @@ project:
 ---
 
 ```{r Setup}
+#| include : false
 
 # Clean the workspace
 rm(list=ls()) 
@@ -36,9 +37,6 @@ This short document presents the coverage of (1) the percentage of women (aged 1
 The results of the analysis are presented in the figure below.
 
 ```{r}
-#| echo : false
-#| include : false
-
 data_fig1 = data_cover %>%   
   # Rename for improved plotting
   rename("ANC4" = "anc4",
@@ -63,7 +61,16 @@ fig1 = ggplot(data = data_fig1,
   theme_minimal() +
   theme(plot.caption = element_text(hjust = 0),
         legend.title = element_blank())
+
+```
+
+```{r}
+#| echo : false
+#| fig-align : center
+
+# Show the figure
 fig1
+
 ```
 
 On the period 2018-2022, in off-track countries 46,8% of women had at least 4 antenatal care visits and 57,5% delivered with the attendance of skilled personnel. In on-track countries these figures are higher : 50,8% and 65,8%. This suggests better healthcare before birth and during delivery is correlated with lower under-five mortality rates.
