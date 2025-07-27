@@ -48,13 +48,13 @@ data_unicef_clean = data_unicef_raw %>%
               values_from = "value") %>% 
   # Rename indicators 
   rename("anc4" = "MNCH_ANC4",
-         "sab" = "MNCH_SAB")
+         "sba" = "MNCH_SAB")
   
 # Save data
 fwrite(x = data_unicef_raw,
-          file = "data/01_raw/data_unicef_anc4_sab_raw.csv")
+          file = "data/01_raw/data_unicef_anc4_sba_raw.csv")
 fwrite(x = data_unicef_clean,
-          file = "data/02_clean/data_unicef_anc4_sab_clean.csv")
+          file = "data/02_clean/data_unicef_anc4_sba_clean.csv")
 
 
 # Remove useless objects in the environnement

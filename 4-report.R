@@ -1,21 +1,11 @@
----
-title: "ANC4 & SAB coverage report"
-format: html
-date : today
-editor: visual
-project:
-     execute-dir: project
-     output-dir : report/
----
-
-```{r Setup}
-#| include : false
+## ----setup, include=FALSE----------------------------------------------------------------------------------------------
+knitr::opts_chunk$set(echo = TRUE)
 
 # Clean the workspace
 rm(list=ls()) 
 
 # Download and install packages
-list_packages <- c("tidyverse", "ARTofR", "openxlsx", "data.table", "quarto",
+list_packages <- c("tidyverse", "ARTofR", "openxlsx", "data.table", "here",
                   "ggplot2", "RColorBrewer", "dplyr", "knitr", "renv", "rmarkdown")
 
 # If the package is not installed, then install it 
@@ -24,19 +14,12 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(list_packages, character.only = TRUE, install = TRUE)
 
 # Import the data
-data_cover = read.csv(file = "data/03_final/data_2022pop-weighted-coverage_anc4_sab_mortality-class.csv")
+## here::here() is used so that paths are referred from project root
+data_cover = read.csv(file = here::here("data/03_final/data_2022pop-weighted-coverage_anc4_sab_mortality-class.csv"))
 
-```
 
-## Introduction
 
-This short document presents the coverage of (1) the percentage of women (aged 15-49) with at least 4 antenatal care visits (ANC4); (2) the percentage of deliveries attended by skilled health personnel (SAB) for two categories of countries according to the under-five mortality classification. On-track countries are described as "achieved" or "on-track" while off-track countries are described as "off-track" under the classification.
-
-## Results
-
-The results of the analysis are presented in the figure below.
-
-```{r}
+## ----include = FALSE---------------------------------------------------------------------------------------------------
 data_fig1 = data_cover %>%   
   # Rename for improved plotting
   rename("ANC4" = "anc4",
@@ -62,15 +45,10 @@ fig1 = ggplot(data = data_fig1,
   theme(plot.caption = element_text(hjust = 0),
         legend.title = element_blank())
 
-```
 
-```{r}
-#| echo : false
-#| fig-align : center
 
+## ----echo = FALSE, fig.align='center'----------------------------------------------------------------------------------
 # Show the figure
 fig1
 
-```
 
-On the period 2018-2022, in off-track countries 46,8% of women had at least 4 antenatal care visits and 57,5% delivered with the attendance of skilled personnel. In on-track countries these figures are higher : 50,8% and 65,8%. This suggests better healthcare before birth and during delivery is correlated with lower under-five mortality rates.

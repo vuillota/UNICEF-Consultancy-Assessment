@@ -33,7 +33,7 @@ set.seed(2025)
 # Please restore the project environment
 #renv::restore()
 
-list_packages <- c("tidyverse", "ARTofR", "openxlsx", "data.table", "quarto",
+list_packages <- c("tidyverse", "ARTofR", "openxlsx", "data.table", "quarto", "here",
                   "ggplot2", "RColorBrewer", "dplyr", "knitr", "renv", "rmarkdown")
 
 # If the package is not installed, then install it 
@@ -56,6 +56,8 @@ source("scripts/1-import_unicef_data.R")
 source("scripts/2-create_analysis_data.R")
 # Compute coverage of both indicators
 source("scripts/3-pop-weighted-coverage.R")
-# Issue report
-source("scripts/4-report.qmd")
+# Issue report by calling Rmarkdown script
+rmarkdown::render('scripts/4-report.Rmd', output_dir = 'report', output_file = "report_anc4_sba.pdf")
+
+
 ######################################################################################################## END :D
