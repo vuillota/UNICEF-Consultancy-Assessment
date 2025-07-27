@@ -16,7 +16,7 @@
 ##  ~ Import the data  ----
 ##~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# UNICEF data : SBA and ANC4 
+# UNICEF data : SAB and ANC4 
 data_unicef = fread("data/02_clean/data_unicef_anc4_sab_clean.csv")
 
 # Under-five mortality classifcation
@@ -51,7 +51,7 @@ data_pop_2022_clean = data_pop_2022_raw %>%
 ##~~~~~~~~~~~~~~~~~~~~~~
 
 # We are interested by status-level aggregation
-# Then we perform left join of population and ANC4/SBA data on country status
+# Then we perform left join of population and ANC4/SAB data on country status
 data_combined = data_mort_class %>% 
   left_join(data_unicef %>% select(-country_name), by = "country_iso3") %>% 
   left_join(data_pop_2022_clean %>% select(-country_name), by = "country_iso3")

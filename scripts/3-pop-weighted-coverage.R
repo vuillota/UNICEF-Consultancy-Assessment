@@ -24,7 +24,7 @@ data_cover = data_combined %>%
   # We also compute number of countries and total population for each group (used in report)
   group_by(group) %>% 
   mutate(weight = pop_proj_2022/sum(pop_proj_2022, na.rm = T)) %>% 
-  summarize(across(.cols = c("anc4", "sba"),
+  summarize(across(.cols = c("anc4", "sab"),
                    .fns = ~ sum(.x * weight, na.rm = T)),
             n_countries = n(),
             tot_pop_2022 = sum(pop_proj_2022*1000, na.rm = T)) %>% 
@@ -32,7 +32,7 @@ data_cover = data_combined %>%
 
 # Save the data
 fwrite(x = data_cover,
-       file = "data/03_final/data_2022pop-weighted-coverage_anc4_sba_mortality-class.csv")
+       file = "data/03_final/data_2022pop-weighted-coverage_anc4_sab_mortality-class.csv")
 
 # Remove useless objects
 rm(data_combined, data_cover)

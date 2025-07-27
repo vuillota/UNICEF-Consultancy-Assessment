@@ -1,0 +1,155 @@
+country_iso3,country_name,anc4,sab
+AFG,Afghanistan,27.6,61.8
+ALB,Albania,77.8,100
+DZA,Algeria,69.8,98.8
+AIA,Anguilla,,100
+ATG,Antigua and Barbuda,,99
+ARG,Argentina,90.4,98.8
+AUS,Australia,,98.7
+AUT,Austria,,98.1
+AZE,Azerbaijan,,99.9
+BHS,Bahamas,,99
+BHR,Bahrain,,98.2
+BGD,Bangladesh,38.3,69.8
+BRB,Barbados,,98.4
+BLR,Belarus,99.9,99.9
+BLZ,Belize,,94.6
+BEN,Benin,52.6,80.8
+BMU,Bermuda,,99.8
+BTN,Bhutan,,98.9
+BOL,Bolivia (Plurinational State of),,71.5
+BIH,Bosnia and Herzegovina,,99.9
+BWA,Botswana,,99.8
+BRA,Brazil,92.3,98.2
+BRN,Brunei Darussalam,,99.6
+BGR,Bulgaria,,94.5
+BFA,Burkina Faso,72.1,95.8
+BDI,Burundi,,75.2
+CPV,Cabo Verde,85.6,97.3
+KHM,Cambodia,86,98.7
+CMR,Cameroon,64.9,69
+CAN,Canada,,97.6
+CAF,Central African Republic,41.4,40.3
+TCD,Chad,,47.2
+CHL,Chile,,99.8
+CHN,China,92.9,
+COL,Colombia,,97.5
+COM,Comoros,64.3,97.2
+CRI,Costa Rica,94.1,98.8
+HRV,Croatia,96.5,99.9
+CUB,Cuba,79.3,99.9
+CYP,Cyprus,,99.9
+CIV,Côte d'Ivoire,56.3,84
+COD,Democratic Republic of the Congo,42.9,85.2
+DNK,Denmark,,96.4
+DMA,Dominica,,100
+DOM,Dominican Republic,92.6,99.2
+ECU,Ecuador,,96.3
+EGY,Egypt,89.9,97.1
+SLV,El Salvador,,98.1
+EST,Estonia,,99.1
+SWZ,Eswatini,73.5,93.4
+ETH,Ethiopia,43,49.8
+FJI,Fiji,88.7,99.8
+FIN,Finland,,99.5
+FRA,France,,97.3
+GAB,Gabon,77.8,95.2
+GMB,Gambia,78.5,83.8
+GEO,Georgia,85.2,99.7
+DEU,Germany,,96.3
+GHA,Ghana,87.8,78.9
+GRC,Greece,,99.9
+GRD,Grenada,,100
+GIN,Guinea,58.3,55.3
+GNB,Guinea-Bissau,80.7,53.8
+GUY,Guyana,84.7,97.6
+HND,Honduras,88.3,94.1
+ISL,Iceland,,97.4
+IND,India,58.4,89.4
+IDN,Indonesia,,94.7
+IRQ,Iraq,67.9,95.6
+IRL,Ireland,,99.6
+ITA,Italy,,99.4
+JAM,Jamaica,,99.8
+JPN,Japan,,99.8
+JOR,Jordan,91.5,99.7
+KAZ,Kazakhstan,,99.9
+KEN,Kenya,66,89.3
+KIR,Kiribati,67,91.9
+XKX,Kosovo (UNSCR 1244),94.4,
+KWT,Kuwait,,99.2
+KGZ,Kyrgyzstan,89,100
+LVA,Latvia,,98.1
+LSO,Lesotho,76.6,86.6
+LBR,Liberia,87.3,84.4
+LTU,Lithuania,,100
+MDG,Madagascar,59.9,45.8
+MWI,Malawi,50.5,96.4
+MYS,Malaysia,98.1,99.8
+MLI,Mali,43.3,67.3
+MLT,Malta,,99.8
+MRT,Mauritania,38.5,70.4
+MUS,Mauritius,,99.7
+MEX,Mexico,,87.5
+MNG,Mongolia,88.5,99.3
+MNE,Montenegro,94.2,98.8
+MSR,Montserrat,,100
+MAR,Morocco,53.5,86.6
+MOZ,Mozambique,51,
+NPL,Nepal,80.5,80.1
+NZL,New Zealand,,95.8
+NER,Niger,37.3,43.7
+NGA,Nigeria,60.4,50.7
+MKD,North Macedonia,95.7,100
+NOR,Norway,,99.1
+OMN,Oman,73.9,100
+PAK,Pakistan,52.4,68
+PLW,Palau,,98.7
+PAN,Panama,,92.5
+PNG,Papua New Guinea,49,56.4
+PRY,Paraguay,81,91.2
+PER,Peru,95.8,94.9
+PHL,Philippines,83,89.6
+POL,Poland,,99.6
+PRT,Portugal,,97.3
+QAT,Qatar,,100
+KOR,Republic of Korea,,100
+MDA,Republic of Moldova,,99.7
+ROU,Romania,70.1,94.7
+RUS,Russian Federation,,99.7
+RWA,Rwanda,47.2,94.2
+KNA,Saint Kitts and Nevis,,100
+LCA,Saint Lucia,,100
+VCT,Saint Vincent and the Grenadines,,99
+WSM,Samoa,69.8,88.9
+STP,Sao Tome and Principe,,96.8
+SAU,Saudi Arabia,79.7,94.8
+SEN,Senegal,29.2,74.5
+SRB,Serbia,96.6,99.9
+SYC,Seychelles,,99.8
+SLE,Sierra Leone,78.8,86.9
+SGP,Singapore,,99.5
+SVK,Slovakia,,98.1
+SOM,Somalia,24.4,31.9
+SSD,South Sudan,31.1,39.7
+ESP,Spain,,99.9
+PSE,State of Palestine,94.8,99.7
+SUR,Suriname,67.5,100
+THA,Thailand,88.3,99.6
+TLS,Timor-Leste,83.1,
+TON,Tonga,88.5,98.3
+TUN,Tunisia,84.1,99.5
+TKM,Turkmenistan,97.6,99.7
+TCA,Turks and Caicos Islands,93.2,100
+TUV,Tuvalu,60.3,99.5
+TUR,Türkiye,89.7,97
+UGA,Uganda,56.7,91
+ARE,United Arab Emirates,,99.9
+TZA,United Republic of Tanzania,65.1,85
+USA,United States,,98.6
+URY,Uruguay,97.3,100
+UZB,Uzbekistan,89.5,99
+VEN,Venezuela (Bolivarian Republic of),,98.7
+VNM,Viet Nam,88.2,96.1
+ZMB,Zambia,63.5,80.4
+ZWE,Zimbabwe,71.5,86

@@ -12,7 +12,7 @@
 
 ######################################################################################################## START :)
 
-# Define query URL generated on https://sdmx.data.unicef.org/webservice/data.html# : ANC4 and SBA indicators for entire world, entire period
+# Define query URL generated on https://sdmx.data.unicef.org/webservice/data.html# : ANC4 and SAB indicators for entire world, entire period
 ## Note it would have also been possible to download data directly (https://data.unicef.org/resources/data_explorer/unicef_f/?ag=UNICEF&df=GLOBAL_DATAFLOW&ver=1.0&dq=.MNCH_ANC4+MNCH_SAB.&startPeriod=2018&endPeriod=2022)
 ## However using an API request ensures we have the latest version of the data (e.g if modifications were done to values of past indicators of interest)
 url = "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,GLOBAL_DATAFLOW,1.0/.MNCH_ANC4+MNCH_SAB.?format=csv&labels=both"
@@ -48,13 +48,13 @@ data_unicef_clean = data_unicef_raw %>%
               values_from = "value") %>% 
   # Rename indicators 
   rename("anc4" = "MNCH_ANC4",
-         "sba" = "MNCH_SAB")
+         "sab" = "MNCH_SAB")
   
 # Save data
 fwrite(x = data_unicef_raw,
-          file = "data/01_raw/data_unicef_anc4_sba_raw.csv")
+          file = "data/01_raw/data_unicef_anc4_sab_raw.csv")
 fwrite(x = data_unicef_clean,
-          file = "data/02_clean/data_unicef_anc4_sba_clean.csv")
+          file = "data/02_clean/data_unicef_anc4_sab_clean.csv")
 
 
 # Remove useless objects in the environnement
