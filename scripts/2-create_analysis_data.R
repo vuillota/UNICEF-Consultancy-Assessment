@@ -5,7 +5,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 #
 #  LAST UPDATE : July 27, 2025
-#  AUTHOR: Antoine Vuillot (antoine.vuillot@outlook.fr)
+#  AUTHOR: XXX
 #  PURPOSE: create analysis dataset
 #_______________________________________________________________________________
 
@@ -59,5 +59,8 @@ data_combined = data_mort_class %>%
 # Save data
 fwrite(x = data_combined,
        file = "data/02_clean/data_combined.csv")
+
+# Remove useless objects
+rm(data_combined, data_pop_2022_clean, data_pop_2022_raw, data_unicef, data_mort_class)
 
 ######################################################################################################## END :D

@@ -5,7 +5,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 #
 #  LAST UPDATE : July 27, 2025
-#  AUTHOR: Antoine Vuillot (antoine.vuillot@outlook.fr)
+#  AUTHOR: XXX
 #  PURPOSE: main script to define session parameters, import packages, and call individual scripts
 #_______________________________________________________________________________
 
@@ -18,8 +18,8 @@
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Start environment : restore from the lockfile
-renv::init()
-1
+#renv::init()
+
 # Clean the workspace
 rm(list=ls()) 
 # Set the same seed for reproducibility
@@ -31,10 +31,10 @@ set.seed(2025)
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Please restore the project environment
-renv::restore()
+#renv::restore()
 
-list_packages <- c("tidyverse", "ARTofR", "openxlsx", "stringi", "janitor", "data.table", "quarto", "kableExtra",
-                   "ggrepel", "ggplot2", "RColorBrewer", "dplyr", "knitr", "httr", "jsonlite", "renv")
+list_packages <- c("tidyverse", "ARTofR", "openxlsx", "data.table", "quarto",
+                  "ggplot2", "RColorBrewer", "dplyr", "knitr", "renv", "rmarkdown")
 
 # If the package is not installed, then install it 
 if (!require("pacman")) install.packages("pacman")
@@ -54,4 +54,8 @@ pacman::p_load(list_packages, character.only = TRUE, install = TRUE)
 source("scripts/1-import_unicef_data.R")
 # Create analysis data by combining mortality status, population data and ANC4/SAB indicators from UNICEF data
 source("scripts/2-create_analysis_data.R")
+# Compute coverage of both indicators
+source("scripts/3-pop-weighted-coverage.R")
+# Issue report
+source("scripts/4-report.qmd")
 ######################################################################################################## END :D

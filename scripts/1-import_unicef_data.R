@@ -5,7 +5,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 #
 #  LAST UPDATE : July 27, 2025
-#  AUTHOR: Antoine Vuillot (antoine.vuillot@outlook.fr)
+#  AUTHOR: XXX
 #  PURPOSE: import indicators from UNICEF data warehouse
 #_______________________________________________________________________________
 
