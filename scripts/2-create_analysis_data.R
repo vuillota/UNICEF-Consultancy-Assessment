@@ -52,12 +52,12 @@ data_pop_2022_clean = data_pop_2022_raw %>%
 
 # We are interested by status-level aggregation
 # Then we perform left join of population and ANC4/SBA data on country status
-data_final = data_mort_class %>% 
+data_combined = data_mort_class %>% 
   left_join(data_unicef %>% select(-country_name), by = "country_iso3") %>% 
   left_join(data_pop_2022_clean %>% select(-country_name), by = "country_iso3")
 
 # Save data
-fwrite(x = data_final,
-       file = "data/03_final/data_final.csv")
+fwrite(x = data_combined,
+       file = "data/02_clean/data_combined.csv")
 
 ######################################################################################################## END :D
