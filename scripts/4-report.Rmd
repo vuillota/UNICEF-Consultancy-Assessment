@@ -3,7 +3,8 @@ title: "ANC4 & SAB coverage report"
 author: "XXX"
 date: "2025-07-27"
 output:
-  bookdown::pdf_document2: default
+  pdf_document:
+  toc: false
 ---
 
 ```{r setup, include=FALSE}
@@ -23,15 +24,21 @@ pacman::p_load(list_packages, character.only = TRUE, install = TRUE)
 
 # Import the data
 ## here::here() is used so that paths are referred from project root
+## Coverage of ANC4 and SAB for on-track and off-track categories
 data_cover = read.csv(file = here::here("data/03_final/data_2022pop-weighted-coverage_anc4_sab_mortality-class.csv"))
-
+## Coverage at country-level for ANC4 and SAB
+## Used to assess data availability
+data_combined = read.csv(file = here::here("data/02_clean/data_combined.csv")) %>% 
+  # Create status "on-track" and "off-track" groups
+  mutate(group = case_when(status == "Achieved" | status == "On Track" ~ "On-track",
+                           status == "Acceleration Needed" ~ "Off-track"))
 ```
 
-## Introduction
+# Introduction
 
 This short document presents the coverage of (1) the percentage of women (aged 15-49) with at least 4 antenatal care visits (ANC4); (2) the percentage of deliveries attended by skilled health personnel (SAB) for two categories of countries created from the under-five mortality classification. On-track countries are described as "achieved" or "on-track" while off-track countries are described as "off-track" under the classification.
 
-## Results
+# Results
 
 The results of the analysis are presented on the figure below.
 
@@ -69,7 +76,9 @@ fig1
 
 ```
 
-On the period 2018-2022, in off-track countries on average 46,8% of women had at least 4 antenatal care visits (ANC4) and 57,5% delivered with the attendance of skilled personnel (SAB). In on-track countries these figures are higher : 50,8% and 65,8%. This suggests better healthcare before birth and during delivery is correlated with lower under-five mortality rates.
+On the period 2018-2022, in off-track countries on average 46,8% of women had at least 4 antenatal care visits (ANC4) and 57,5% delivered with the attendance of skilled personnel (SAB). In on-track countries these figures are higher : 50,8% and 65,8%. This suggests better healthcare before birth and during delivery is correlated with lower under-five mortality rates. 
+
+This analysis is very preliminary and an assessment of the factors impacting under-five mortality rates would require a deeper analysis (adding variables on mother living conditions before birth typically). Also this analysis is limited by availability of data on the 2018-2022 period : out of `r nrow(data_combined[data_combined$group == "On-track",])` on-track countries (`r nrow(data_combined[data_combined$group == "Off-track",])` off-track) `r nrow(data_combined[data_combined$group == "On-track" & is.na(data_combined$anc4) == F,])` (`r nrow(data_combined[data_combined$group == "Off-track" & is.na(data_combined$anc4) == F,])`) have an ANC4 estimate and `r nrow(data_combined[data_combined$group == "On-track" & is.na(data_combined$sab) == F,])` (`r nrow(data_combined[data_combined$group == "Off-track" & is.na(data_combined$sab) == F,])`) have a SAB estimate. 
 
 
 
