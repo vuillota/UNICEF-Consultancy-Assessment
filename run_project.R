@@ -18,8 +18,8 @@
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Start environment : restore from the lockfile
-#renv::init()
-
+# renv::init()
+# 1
 # Clean the workspace
 rm(list=ls()) 
 # Set the same seed for reproducibility
@@ -31,7 +31,7 @@ set.seed(2025)
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Please restore the project environment
-#renv::restore()
+renv::restore()
 
 list_packages <- c("tidyverse", "ARTofR", "openxlsx", "data.table", "here",
                   "ggplot2", "RColorBrewer", "dplyr", "knitr", "renv", "rmarkdown")
