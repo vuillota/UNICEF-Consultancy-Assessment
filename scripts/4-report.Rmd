@@ -38,6 +38,14 @@ data_combined = read.csv(file = here::here("data/02_clean/data_combined.csv")) %
 
 This short document presents the coverage of (1) the percentage of women (aged 15-49) with at least 4 antenatal care visits (ANC4); (2) the percentage of deliveries attended by skilled health personnel (SAB) for two categories of countries created from the under-five mortality classification. On-track countries are described as "achieved" or "on-track" while off-track countries are described as "off-track" under the classification.
 
+This document is part of the assessment for the following positions at **UNICEF Data and Analytics** :
+
+  * Learning and Skills Data Analyst Consultant (Req. #581598)
+  * Household Survey Data Analyst Consultant (Req. #581656)
+  * Administrative Data Analyst (Req. #581696)
+  * Microdata Harmonization Consultant (Req. #581699)
+
+
 # Results
 
 The results of the analysis are presented on the figure below.
